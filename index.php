@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Data Design for Science Daily References</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Data Design for <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> References</h1>
@@ -21,10 +22,13 @@
         </p>
     <h2>Interaction Flow</h2>
          <ol>
-            <li>Navigates to <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> </li>
-            <li>Mouses over "Health" in nav bar and clicks on "Mind and Brain"</li>
-            <li>Scrolls through the news articles populated on the "Mind and Brain" page</li>
-            <li></li>
+            <li>User navigates to <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> </li>
+            <li>User mouses over "Health" in nav bar and clicks on "Mind and Brain"</li>
+            <li>Site directs to page with recent headlines </li>
+            <li>User clicks on an a news article</li>
+            <li>Site loads the selected article</li>
+            <li>User reads the article then clicks on the journal reference at the end of the page</li>
+            <li>Site opens new tab to appropriate link</li>
         </ol>
 </body>
 </html>
