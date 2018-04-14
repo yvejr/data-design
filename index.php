@@ -21,7 +21,7 @@
         <p>Lilly checks Science Daily to see current science news in psychology.
         </p>
     <h2>Interaction Flow</h2>
-         <ol>
+         <ul>
             <li>User navigates to <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> </li>
             <li>User mouses over "Health" in nav bar and clicks on "Mind and Brain"</li>
             <li>Site directs to page with recent headlines </li>
@@ -29,6 +29,10 @@
             <li>Site loads the selected article</li>
             <li>User reads the article then clicks on the journal reference at the end of the page</li>
             <li>Site opens new tab to appropriate link</li>
-        </ol>
+        </ul>
+    <h2>Conceptual model</h2>
+        <ul>
+            <li>Articles</li>
+        </ul>
 </body>
 </html>
