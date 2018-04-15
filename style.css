@@ -1,22 +1,21 @@
-h1 {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    line-height: 26.4px;
-    font-color: 0074D9;
-}
 h2 {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
     line-height: 15.4px;
 }
+h3 {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.4px;
+}
 p {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-variant: normal;
@@ -24,7 +23,7 @@ p {
     line-height: 20px;
 }
 ul {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: "Segoe UI", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-variant: normal;

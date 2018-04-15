@@ -30,9 +30,36 @@
             <li>User reads the article then clicks on the journal reference at the end of the page</li>
             <li>Site opens new tab to appropriate link</li>
         </ul>
-    <h2>Conceptual model</h2>
+    <h1>Conceptual model</h1>
+    <h3>Categories</h3>
         <ul>
-            <li>Articles</li>
+            <li>categoryName</li>
+        </ul>
+    <h3>SubCategories</h3>
+        <ul>
+            <li>subCategoryName</li>
+        </ul>
+    <h3>Topics</h3>
+        <ul>
+            <li>topicName</li>
+        </ul>
+    <h3>Articles</h3>
+        <ul>
+            <li>articleName</li>
+            <li>articleDate</li>
+            <li>articleAuthor</li>
+        </ul>
+    <h3>References</h3>
+        <ul>
+            <li>referenceDoi</li>
+            <li>referenceAuthor</li>
+            <li>referenceDatePublished</li>
+        </ul>
+    <h3>Source</h3>
+        <ul>
+            <li>materials</li>
+            <li>sourceProvider</li>
+            <li>name</li>
         </ul>
 </body>
 </html>
