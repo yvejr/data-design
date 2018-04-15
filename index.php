@@ -8,13 +8,15 @@
 <body>
     <h1>Data Design for <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> References</h1>
     <h2>Persona</h2>
-        <p><strong>Name</strong>: Lilly</p>
-        <p><strong>Age</strong>: 25</p>
-        <p><strong>Occupation</strong>: Undergraduate student of psychology</p>
-        <p><strong>Technology</strong>: Fluent user with a MacBook Pro 15" OS High Sierra 10.13.4 and an Apple iPhone X iOS 11.3</p>
-        <p><strong>Attitude</strong>: She is used to research and sometimes having to go several sources in to find what she wants, but hates getting lost in databases or the Google rabbit hole.</p>
-        <p><strong>Goal</strong>: To be able to find relevant articles and cite the sources to do additional research.</p>
-        <p><strong>Frustrations</strong>: Hates getting lost in databases trying to find original source material, or searching through Google results. Especially dislikes when article are cited incorrectly.  Inability to export or copy citations in APA format.</p>
+        <ul>
+            <li>Name: Lilly</li>
+            <li>Age: 25</li>
+            <li>Occupation: Undergraduate student of psychology</li>
+            <li>Technology: Fluent user with a MacBook Pro 15" OS High Sierra 10.13.4 and an Apple iPhone X iOS 11.3</li>
+            <li>Attitude: She is used to research and sometimes having to go several sources in to find what she wants, but hates getting lost in databases or the Google rabbit hole.</li>
+            <li>Goal: To be able to find relevant articles and cite the sources to do additional research.</li>
+            <li>Frustrations: Hates getting lost in databases trying to find original source material, or searching through Google results. Especially dislikes when article are cited incorrectly.  Inability to export or copy citations in APA format.</li>
+        </ul>
     <h2>User Story</h2>
         <p> As a student, Lilly wants to use <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> to find short news articles on current research.</p>
     <h2>Use Case</h2>
@@ -31,50 +33,53 @@
             <li>Site opens new tab to appropriate link</li>
         </ul>
     <h1>Conceptual model</h1>
-    <h3>Conditions</h3>
+    <h2>Conditions</h2>
         <ul>
-            <li>Precondition: An article is published on the site.</li>
-            <li>The article displays references for readers.</li>
-            <li>Frequency of use: Daily.</li>
+            <li>Precondition: An article has already been published on the site with the appropriate references.</li>
+            <li>Post-condition: The article displays references for readers.</li>
+            <li>Frequency of use: Daily</li>
         </ul>
-    <h3>Categories</h3>
+    <h2>Entities and Attributes</h2>
+    <h3>Category</h3>
         <ul>
             <li>categoryName</li>
+            <li>categoryId (primary key)</li>
         </ul>
-    <h3>SubCategories</h3>
+    <h3>SubCategory</h3>
         <ul>
             <li>subCategoryName</li>
+            <li>subCategoryId (primary key)</li>
         </ul>
-    <h3>Topics</h3>
+    <h3>Topic</h3>
         <ul>
             <li>topicName</li>
+            <li>topicId (primary key)</li>
         </ul>
-    <h3>Articles</h3>
+    <h3>Article</h3>
         <ul>
             <li>articleName</li>
+            <li>articleId (primary key)</li>
             <li>articleDate</li>
             <li>articleAuthor</li>
-            <li>articleSummaryId</li>
+            <li>articleSummaryId(foreign key)</li>
             <li>articleViewCount</li>
+            <li>articleCategoryId (foreign key)</li>
+            <li>articleSubCategoryId (foreign key)</li>
+            <li>articleTopicId (foreign key)</li>
         </ul>
-    <h3>References</h3>
+    <h3>Reference</h3>
         <ul>
+            <li>referenceId (primary key)</li>
             <li>referenceDoi</li>
             <li>referenceAuthor</li>
             <li>referenceDatePublished</li>
+            <li>referenceArticleId (foreign key)</li>
         </ul>
-    <h3>Source</h3>
-        <ul>
-            <li>materials</li>
-            <li>sourceProvider</li>
-            <li>name</li>
-        </ul>
-    <h3>Relationships</h3>
+    <h2>Relationships</h2>
     <ul>
         <li>One category can have multiple subcategories.</li>
-        <li>One subcategory can be one category.</li>
-
-        <li>One topic can be in one subcategory.</li>
+        <li>One subcategory can have one category.</li>
+        <li>One topic can be multiple subcategories.</li>
         <li>One subcategory can have multiple topics.</li>
         <li>One topic can have multiple articles.</li>
         <li>One article can appear in multiple topics.</li>
