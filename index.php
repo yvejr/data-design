@@ -61,5 +61,21 @@
             <li>sourceProvider</li>
             <li>name</li>
         </ul>
+    <h3>Relationships</h3>
+    <ul>
+        <li>One category can have multiple subcategories.</li>
+        <li>One subcategory can be in multiple categories.</li>
+
+        <li>One topic can have multiple categories.</li>
+        <li>One topic can have multiple subcategories.</li>
+
+        <li>One article can have multiple topics.</li>
+        <li>One topic can have multiple articles.</li>
+
+
+        <li>One article can have multiple references.</li>
+        <li>One reference can have multiple articles.</li>
+
+    </ul>
 </body>
 </html>
