@@ -31,6 +31,12 @@
             <li>Site opens new tab to appropriate link</li>
         </ul>
     <h1>Conceptual model</h1>
+    <h3>Conditions</h3>
+        <ul>
+            <li>Precondition: An article is published on the site.</li>
+            <li>The article displays references for readers.</li>
+            <li>Frequency of use: Daily.</li>
+        </ul>
     <h3>Categories</h3>
         <ul>
             <li>categoryName</li>
@@ -48,6 +54,8 @@
             <li>articleName</li>
             <li>articleDate</li>
             <li>articleAuthor</li>
+            <li>articleSummaryId</li>
+            <li>articleViewCount</li>
         </ul>
     <h3>References</h3>
         <ul>
@@ -64,16 +72,14 @@
     <h3>Relationships</h3>
     <ul>
         <li>One category can have multiple subcategories.</li>
-        <li>One subcategory can be in multiple categories.</li>
+        <li>One subcategory can be one category.</li>
 
-        <li>One topic can have multiple categories.</li>
-        <li>One topic can have multiple subcategories.</li>
-
-        <li>One article can have multiple topics.</li>
+        <li>One topic can be in one subcategory.</li>
+        <li>One subcategory can have multiple topics.</li>
         <li>One topic can have multiple articles.</li>
-
-
-        <li>One article can have multiple references.</li>
+        <li>One article can appear in multiple topics.</li>
+        <li>One article can have multiple topics.</li>
+        <li>One article can have one reference.</li>
         <li>One reference can have multiple articles.</li>
 
     </ul>
