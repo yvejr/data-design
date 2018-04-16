@@ -32,24 +32,14 @@
             <li>User reads the article then clicks on the journal reference at the end of the page</li>
             <li>Site opens new tab to appropriate link</li>
         </ul>
-    <h1>Conceptual model</h1>
     <h2>Conditions</h2>
-        <ul>
-            <li>Precondition: An article has already been published on the site with the appropriate references.</li>
-            <li>Post-condition: The article displays references for readers.</li>
-            <li>Frequency of use: Daily</li>
-        </ul>
+    <ul>
+        <li>Precondition: An article has already been published on the site with the appropriate references.</li>
+        <li>Post-condition: The article displays references for readers.</li>
+        <li>Frequency of use: Daily</li>
+    </ul>
+    <h1>Conceptual model</h1>
     <h2>Entities and Attributes</h2>
-    <h3>Category</h3>
-        <ul>
-            <li>categoryName</li>
-            <li>categoryId (primary key)</li>
-        </ul>
-    <h3>SubCategory</h3>
-        <ul>
-            <li>subCategoryName</li>
-            <li>subCategoryId (primary key)</li>
-        </ul>
     <h3>Topic</h3>
         <ul>
             <li>topicName</li>
