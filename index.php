@@ -63,15 +63,8 @@
         </ul>
     <h2>Relationships</h2>
         <ul>
-            <li>One category can have multiple subcategories.</li>
-            <li>One subcategory can have one category.</li>
-            <li>One topic can be multiple subcategories.</li>
-            <li>One subcategory can have multiple topics.</li>
-            <li>One topic can have multiple articles.</li>
-            <li>One article can appear in multiple topics.</li>
-            <li>One article can have multiple topics.</li>
-            <li>One article can have one reference.</li>
-            <li>One reference can have multiple articles.</li>
+            <li>Many topics can have many articles: <em>m</em> to <em>n</em></li>
+            <li>One article can have one reference: <em>1</em> to <em>1</em></li>
         </ul>
     <h1>Logical Model</h1>
     <img src="erdfordatadesign.svg" alt="diagram of logical model">
