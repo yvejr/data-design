@@ -20,10 +20,16 @@
     <h2>User Story</h2>
         <p> As a student, Lilly wants to use <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> to find short news articles on current research.</p>
     <h2>Use Case</h2>
-        <p>Lilly checks Science Daily to see current science news in psychology.
-        </p>
+        <p>Lilly checks Science Daily to see current science news in psychology.</p>
+    <h1>Interaction Flow</h1>
+    <h2>Conditions</h2>
+        <ul>
+            <li>Precondition: An article has already been published on the site with the appropriate references.</li>
+            <li>Post-condition: The article displays references for readers.</li>
+            <li>Frequency of use: Daily</li>
+        </ul>
     <h2>Interaction Flow</h2>
-         <ul>
+        <ul>
             <li>User navigates to <a href="https://www.sciencedaily.com/"target="_blank">Science Daily</a> </li>
             <li>User mouses over "Health" in nav bar and clicks on "Mind and Brain"</li>
             <li>Site directs to page with recent headlines </li>
@@ -32,11 +38,6 @@
             <li>User reads the article then clicks on the journal reference at the end of the page</li>
             <li>Site opens new tab to appropriate link</li>
         </ul>
-    <h2>Conditions</h2>
-    <ul>
-        <li>Precondition: An article has already been published on the site with the appropriate references.</li>
-        <li>Post-condition: The article displays references for readers.</li>
-        <li>Frequency of use: Daily</li>
     </ul>
     <h1>Conceptual model</h1>
     <h2>Entities and Attributes</h2>
