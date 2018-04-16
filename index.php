@@ -76,17 +76,19 @@
             <li>referenceArticleId (foreign key)</li>
         </ul>
     <h2>Relationships</h2>
-    <ul>
-        <li>One category can have multiple subcategories.</li>
-        <li>One subcategory can have one category.</li>
-        <li>One topic can be multiple subcategories.</li>
-        <li>One subcategory can have multiple topics.</li>
-        <li>One topic can have multiple articles.</li>
-        <li>One article can appear in multiple topics.</li>
-        <li>One article can have multiple topics.</li>
-        <li>One article can have one reference.</li>
-        <li>One reference can have multiple articles.</li>
+        <ul>
+            <li>One category can have multiple subcategories.</li>
+            <li>One subcategory can have one category.</li>
+            <li>One topic can be multiple subcategories.</li>
+            <li>One subcategory can have multiple topics.</li>
+            <li>One topic can have multiple articles.</li>
+            <li>One article can appear in multiple topics.</li>
+            <li>One article can have multiple topics.</li>
+            <li>One article can have one reference.</li>
+            <li>One reference can have multiple articles.</li>
 
-    </ul>
+        </ul>
+    <h1>Logical Model</h1>
+    <img src="ERDforDataDesign.svg" alt="diagram of logical model"
 </body>
 </html>
