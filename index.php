@@ -51,6 +51,7 @@
             <li>articleId (primary key)</li>
             <li>articleTopicId (foreign key)</li>
             <li>articleAuthor</li>
+            <li>articleContent</li>
             <li>articleDate</li>
             <li>articleName</li>
         </ul>
