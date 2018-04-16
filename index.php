@@ -42,28 +42,24 @@
     <h2>Entities and Attributes</h2>
     <h3>Topic</h3>
         <ul>
-            <li>topicName</li>
             <li>topicId (primary key)</li>
+            <li>topicName</li>
         </ul>
     <h3>Article</h3>
         <ul>
-            <li>articleName</li>
             <li>articleId (primary key)</li>
-            <li>articleDate</li>
-            <li>articleAuthor</li>
-            <li>articleSummaryId(foreign key)</li>
-            <li>articleViewCount</li>
-            <li>articleCategoryId (foreign key)</li>
-            <li>articleSubCategoryId (foreign key)</li>
             <li>articleTopicId (foreign key)</li>
+            <li>articleAuthor</li>
+            <li>articleDate</li>
+            <li>articleName</li>
         </ul>
     <h3>Reference</h3>
         <ul>
             <li>referenceId (primary key)</li>
-            <li>referenceDoi</li>
+            <li>referenceArticleId (foreign key)</li>
             <li>referenceAuthor</li>
             <li>referenceDatePublished</li>
-            <li>referenceArticleId (foreign key)</li>
+            <li>referenceDoi</li>
         </ul>
     <h2>Relationships</h2>
         <ul>
