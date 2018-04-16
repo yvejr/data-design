@@ -1,18 +1,18 @@
 CREATE TABLE topic (
-    topicId,
-    topicName,
+    topicId BINARY(16) NOT NULL,
+    topicName VARCHAR(16) NOT NULL,
 );
 CREATE TABLE article (
-    articleId,
-    articlTopicId,
-    articleAuthor,
-    articleDate,
-    articleName,
+    articleId BINARY(16) NOT NULL,
+    articlTopicId BINARY(16) NOT NULL,
+    articleAuthor VARCHAR(16) NOT NULL,
+    articleDate DATE(6) NOT NULL,
+    articleName VARCHAR(16) NOT NULL,
 );
 CREATE TABLE reference (
-    referenceId,
-    referenceArticleId,
-    referenceAuthor,
-    referenceDatePublished,
-    referenceDoi,
+    referenceId BINARY(16) NOT NULL,
+    referenceArticleId BINARY(16) NOT NULL,
+    referenceAuthor VARCHAR(16) NOT NULL,
+    referenceDatePublished DATE(6),
+    referenceDoi VARCHAR (16),
 );
