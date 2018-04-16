@@ -86,9 +86,8 @@
             <li>One article can have multiple topics.</li>
             <li>One article can have one reference.</li>
             <li>One reference can have multiple articles.</li>
-
         </ul>
     <h1>Logical Model</h1>
-    <img src="erdfordatadesign.svg" alt="diagram of logical model"
+    <img src="erdfordatadesign.svg" alt="diagram of logical model">
 </body>
 </html>
