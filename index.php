@@ -89,6 +89,6 @@
 
         </ul>
     <h1>Logical Model</h1>
-    <img src="ERDforDataDesign.svg" alt="diagram of logical model"
+    <img src="erdfordatadesign.svg" alt="diagram of logical model"
 </body>
 </html>
