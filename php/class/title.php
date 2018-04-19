@@ -16,8 +16,7 @@ class Topic
     /**
      * mutator method for topic name
      **/
-    public function setTopicName($newTopicName): void
-    {
+    public function setTopicName($newTopicName): void {
         $newTopicName = trim($newTopicName);
 
         //verify the topic name is secure, if not then display error message
@@ -34,23 +33,21 @@ class Topic
     /**
      *accessor for topic name
      **/
-    public function getTopicName(): string
-    {
+    public function getTopicName(): string {
         return ($this->topicName);
     }
 
     /**
      * mutator method for topic id
      **/
-    public function setTopicId($newTopicId): void
-    {
-        {
+    public function setTopicId($newTopicId): void {
             $newTopicId = trim($newTopicName);
             try {
                 $uuid = self::validateUuid($newtitleId);
-            } catch (\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception) {
+            }
+            catch {(\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception) {
                 newTopicName = filter_var($newTopicName FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-    if (empty($newTopicName) === true) {
+                if (empty($newTopicName) === true) {
         throw(new \InvalidArgumentException("topic name is either empty or insecure"));
     }
     }
@@ -64,14 +61,13 @@ class Topic
              **/
             $exceptionType = get_class($exception);
             throw(new $exceptionType($exception->getMessage(), 0, $exception));
-        }
 
         // convert and store the title id
         $this->titleId = $uuid;
     }
-/**
- *accessor method for topic id
- **/
+    /**
+     *accessor method for topic id
+     **/
     public function getTopicId() : Uuid{
             return($this->topicProfileId);
     }
