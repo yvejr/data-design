@@ -41,8 +41,7 @@ class Topic {
     /**
      * mutator method for topic id
      **/
-    public function setTopicId($newTopicId): void
-    {
+    public function setTopicId($newTopicId): void {
         $newTopicId = trim($newTopicId);
         try {
             $uuid = self::validateUuid($newTopicId);
