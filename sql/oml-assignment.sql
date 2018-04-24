@@ -1,21 +1,10 @@
-INSERT INTO topic (topicId)
-VALUES
+DELETE FROM topic WHERE topic = 'Giraffes';
+DELETE FROM topic WHERE topic= 'Gazelle';
 
-UPDATE topic
-SET topicName = "Cows"
-WHERE
+INSERT INTO topic (topicId, topicName) VALUES (UNHEX(REPLACE("7b96dbd5-580c-49c3-898f-e252d8f2a251", "-", "")))
+('Addiction');
+INSERT INTO topic (topicId, topicName) VALUES (UNHEX(REPLACE("31755cd7-2ca5-441d-b673-17eceb59351a", "-", "")))
+('Intelligence');
 
-DELETE FROM topic
-WHERE  = "Giraffes";
-
-INSERT INTO topic(topicId)
-VALUES
-
-UPDATE
-SET
-WHERE
-
-DELETE FROM
-WHERE
-
-SELECT * FROM
+UPDATE topic set topicName = 'Relationships' WHERE 'Love';
+UPDATE topic set topicName = 'Headaches' WHERE 'Conclusions';
