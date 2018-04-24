@@ -12,8 +12,8 @@ INSERT INTO topic(topicId)
 VALUES
 
 UPDATE
-SET movieGenre = "Crime"
-WHERE movieGenre = "Thriller";
+SET
+WHERE
 
 DELETE FROM
 WHERE
