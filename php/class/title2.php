@@ -60,9 +60,9 @@ class Topic implements \JsonSerializable {
     /**
      * mutator method for topic id
      *
-     * @param Uuid|string $newtopicId new value of topic id
-     * @throws \RangeException if $newtopicId is not positive
-     * @throws \TypeError if $newtopicId is not a uuid or string
+     * @param Uuid|string $newTopicId new value of topic id
+     * @throws \RangeException if $newTopicId is not positive
+     * @throws \TypeError if $newtTopicId is not a uuid or string
      **/
     public function setTopicId( $newTopicId) : void {
         try {
@@ -156,7 +156,7 @@ class Topic implements \JsonSerializable {
     public function update(\PDO $pdo) : void {
 
         // create query template
-        $query = "UPDATE tweet SET topicName = :topicName WHERE topicId = :topicId";
+        $query = "UPDATE topic SET topicName = :topicName WHERE topicId = :topicId";
         $statement = $pdo->prepare($query);
 
         $parameters = ["topicId" => $this->topicId->getBytes(),"topicName" => $this->topicName,];
@@ -223,7 +223,7 @@ class Topic implements \JsonSerializable {
         $topicName = str_replace("_", "\\_", str_replace("%", "\\%", $topicName));
 
         // create query template
-        $query = "SELECT topicId, topicName, FROM topic WHERE topicName";
+        $query = "SELECT topicId, topicName FROM topic WHERE topicName";
         $statement = $pdo->prepare($query);
 
         // bind the topic content to the place holder in the template
@@ -257,7 +257,7 @@ class Topic implements \JsonSerializable {
      **/
     public static function getAllTopics(\PDO $pdo) : \SPLFixedArray {
         // create query template
-        $query = "SELECT topicId, topicProfileId, topicContent, topicDate FROM topic";
+        $query = "SELECT topicId FROM topic";
         $statement = $pdo->prepare($query);
         $statement->execute();
 
@@ -266,7 +266,7 @@ class Topic implements \JsonSerializable {
         $statement->setFetchMode(\PDO::FETCH_ASSOC);
         while(($row = $statement->fetch()) !== false) {
             try {
-                $topic = new topic($row["topicId"], $row["topicProfileId"], $row["topicContent"], $row["topicDate"]);
+                $topic = new topic($row["topicId"], $row["topicName"]);
                 $topics[$topics->key()] = $topic;
                 $topics->next();
             } catch(\Exception $exception) {
