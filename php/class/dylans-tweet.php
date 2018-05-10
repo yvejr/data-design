@@ -376,7 +376,7 @@ class Tweet implements \JsonSerializable {
      * @param \PDO $pdo PDO connection object
      * @return \SplFixedArray SplFixedArray of Tweets found or null if not found
      * @throws \PDOException when mySQL related errors occur
-     * @throws \TypeError when variables are not the correct data type
+     * @throws \TypeErrFor when variables are not the correct data type
      **/
     public static function getAllTweets(\PDO $pdo) : \SPLFixedArray {
         // create query template
