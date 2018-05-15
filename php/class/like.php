@@ -142,7 +142,7 @@ class Like implements \JsonSerializable {
      **/
     public function insert(\PDO $pdo) : void {
         // create query template
-        $query = "INSERT INTO `like`(likeProfileId, likeTweetId, likeDate) VALUES(:likeProfileId, :likeTweetId, :likeDate)";
+        $query = "INSERT INTO like(likeProfileId, likeTweetId, likeDate) VALUES(:likeProfileId, :likeTweetId, :likeDate)";
         $statement = $pdo->prepare($query);
         // bind the member variables to the place holders in the template
         $formattedDate = $this->likeDate->format("Y-m-d H:i:s.u");
@@ -157,7 +157,7 @@ class Like implements \JsonSerializable {
      **/
     public function delete(\PDO $pdo) : void {
         // create query template
-        $query = "DELETE FROM `like` WHERE likeProfileId = :likeProfileId AND likeTweetId = :likeTweetId";
+        $query = "DELETE FROM like WHERE likeProfileId = :likeProfileId AND likeTweetId = :likeTweetId";
         $statement = $pdo->prepare($query);
         //bind the member variables to the placeholders in the template
         $parameters = ["likeProfileId" => $this->likeProfileId->getBytes(), "likeTweetId" => $this->likeTweetId->getBytes()];
@@ -184,7 +184,7 @@ class Like implements \JsonSerializable {
             throw(new \PDOException($exception->getMessage(), 0, $exception));
         }
         // create query template
-        $query = "SELECT likeProfileId, likeTweetId, likeDate FROM `like` WHERE likeProfileId = :likeProfileId AND likeTweetId = :likeTweetId";
+        $query = "SELECT likeProfileId, likeTweetId, likeDate FROM like WHERE likeProfileId = :likeProfileId AND likeTweetId = :likeTweetId";
         $statement = $pdo->prepare($query);
         // bind the tweet id and profile id to the place holder in the template
         $parameters = ["likeProfileId" => $likeProfileId->getBytes(), "likeTweetId" => $likeTweetId->getBytes()];
@@ -218,7 +218,7 @@ class Like implements \JsonSerializable {
             throw(new \PDOException($exception->getMessage(), 0, $exception));
         }
         // create query template
-        $query = "SELECT likeProfileId, likeTweetId, likeDate FROM `like` WHERE likeProfileId = :likeProfileId";
+        $query = "SELECT likeProfileId, likeTweetId, likeDate FROM like WHERE likeProfileId = :likeProfileId";
         $statement = $pdo->prepare($query);
         // bind the member variables to the place holders in the template
         $parameters = ["likeProfileId" => $likeProfileId->getBytes()];
@@ -253,7 +253,7 @@ class Like implements \JsonSerializable {
             throw(new \PDOException($exception->getMessage(), 0, $exception));
         }
         // create query template
-        $query = "SELECT likeProfileId, likeTweetId, likeDate FROM `like` WHERE likeTweetId = :likeTweetId";
+        $query = "SELECT likeProfileId, likeTweetId, likeDate FROM like WHERE likeTweetId = :likeTweetId";
         $statement = $pdo->prepare($query);
         // bind the member variables to the place holders in the template
         $parameters = ["likeTweetId" => $likeTweetId->getBytes()];
